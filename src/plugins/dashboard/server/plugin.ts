@@ -47,6 +47,8 @@ export class DashboardPlugin
     this.logger.debug('dashboard: Setup');
 
     core.savedObjects.registerType(
+
+      // experience 
       createDashboardSavedObjectType({
         migrationDeps: {
           embeddable: plugins.embeddable,

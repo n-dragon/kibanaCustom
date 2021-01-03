@@ -60,9 +60,11 @@ export type MetricVisExpressionFunctionDefinition = ExpressionFunctionDefinition
   Render<MetricVisRenderValue>
 >;
 
+// declaration of visualization
 export const createMetricVisFn = (): MetricVisExpressionFunctionDefinition => ({
   name: 'metricVis',
   type: 'render',
+  // input Type ?
   inputTypes: ['datatable'],
   help: i18n.translate('visTypeMetric.function.help', {
     defaultMessage: 'Metric visualization',
@@ -179,8 +181,10 @@ export const createMetricVisFn = (): MetricVisExpressionFunctionDefinition => ({
       type: 'render',
       as: 'metric_vis',
       value: {
+        // data
         visData: input,
         visType,
+        // config from user
         visConfig: {
           metric: {
             percentageMode: args.percentageMode,

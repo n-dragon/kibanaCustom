@@ -26,6 +26,7 @@ export enum ViewMode {
   VIEW = 'view',
 }
 
+// data of embeddable Input
 export type EmbeddableInput = {
   viewMode?: ViewMode;
   title?: string;
@@ -35,12 +36,14 @@ export type EmbeddableInput = {
    * have two Embeddables where everything else is the same but the id.
    */
   id: string;
+  //
   lastReloadRequestTime?: number;
   hidePanelTitles?: boolean;
 
   /**
    * Reserved key for enhancements added by other plugins.
    */
+  // what ? other plugins can add data ?
   enhancements?: SerializableState;
 
   /**
@@ -61,6 +64,7 @@ export type EmbeddableInput = {
   /**
    * Visualization query string used to narrow down results.
    */
+  // ??
   query?: Query;
 
   /**
@@ -74,6 +78,7 @@ export type EmbeddableInput = {
   searchSessionId?: string;
 };
 
+// embeddable 
 export interface PanelState<E extends EmbeddableInput & { id: string } = { id: string }> {
   // The type of embeddable in this panel. Will be used to find the factory in which to
   // load the embeddable.

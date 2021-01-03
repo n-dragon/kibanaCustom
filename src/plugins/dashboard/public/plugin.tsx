@@ -165,7 +165,7 @@ declare module '../../../plugins/ui_actions/public' {
 
 export class DashboardPlugin
   implements Plugin<DashboardSetup, DashboardStart, SetupDependencies, StartDependencies> {
-  constructor(private initializerContext: PluginInitializerContext) {}
+  constructor(private initializerContext: PluginInitializerContext) { }
 
   private appStateUpdater = new BehaviorSubject<AppUpdater>(() => ({}));
   private stopUrlTracking: (() => void) | undefined = undefined;
@@ -179,8 +179,10 @@ export class DashboardPlugin
     core: CoreSetup<StartDependencies, DashboardStart>,
     { share, uiActions, embeddable, home, urlForwarding, data, usageCollection }: SetupDependencies
   ): DashboardSetup {
+    console.log("DASHBOARD SETUP");
     this.dashboardFeatureFlagConfig = this.initializerContext.config.get<DashboardFeatureFlagConfig>();
     const expandPanelAction = new ExpandPanelAction();
+    // set up entry menu to trigger action
     uiActions.registerAction(expandPanelAction);
     uiActions.attachAction(CONTEXT_MENU_TRIGGER, expandPanelAction.id);
     const startServices = core.getStartServices();
@@ -281,7 +283,7 @@ export class DashboardPlugin
 
     const app: App = {
       id: DashboardConstants.DASHBOARDS_ID,
-      title: 'Dashboard',
+      title: 'Experience Studio',
       order: 2500,
       euiIconType: 'logoKibana',
       defaultPath: `#${DashboardConstants.LANDING_PAGE_PATH}`,
@@ -292,6 +294,7 @@ export class DashboardPlugin
         this.currentHistory = params.history;
         appMounted();
         const {
+          // embeddalbe core service
           embeddable: embeddableStart,
           navigation,
           share: shareStart,
@@ -346,6 +349,8 @@ export class DashboardPlugin
     initAngularBootstrap();
 
     core.application.register(app);
+
+    
     urlForwarding.forwardApp(
       DashboardConstants.DASHBOARDS_ID,
       DashboardConstants.DASHBOARDS_ID,
@@ -412,11 +417,17 @@ export class DashboardPlugin
     core.application.navigateToApp('dashboards', { path: dashboardUrl });
   }
 
+  // why returning a thing from start lifecycle==> to inject as dependency to other dependant
+  // 
   public start(core: CoreStart, plugins: StartDependencies): DashboardStart {
     const { notifications } = core;
     const { uiActions } = plugins;
 
+    console.log("DASHBOARD START");
     const SavedObjectFinder = getSavedObjectFinder(core.savedObjects, core.uiSettings);
+
+    // const ddata=import ("data");
+
 
     const changeViewAction = new ReplacePanelAction(
       core,
@@ -424,6 +435,7 @@ export class DashboardPlugin
       notifications,
       plugins.embeddable.getEmbeddableFactories
     );
+    // saving to menu with callback
     uiActions.registerAction(changeViewAction);
     uiActions.attachAction(CONTEXT_MENU_TRIGGER, changeViewAction.id);
 

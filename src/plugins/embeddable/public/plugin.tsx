@@ -77,7 +77,7 @@ export interface EmbeddableSetup {
     I extends EmbeddableInput,
     O extends EmbeddableOutput,
     E extends IEmbeddable<I, O> = IEmbeddable<I, O>
-  >(
+    >(
     id: string,
     factory: EmbeddableFactoryDefinition<I, O, E>
   ) => () => EmbeddableFactory<I, O, E>;
@@ -90,7 +90,7 @@ export interface EmbeddableStart extends PersistableStateService<EmbeddableState
     I extends EmbeddableInput = EmbeddableInput,
     O extends EmbeddableOutput = EmbeddableOutput,
     E extends IEmbeddable<I, O> = IEmbeddable<I, O>
-  >(
+    >(
     embeddableFactoryId: string
   ) => EmbeddableFactory<I, O, E> | undefined;
   getEmbeddableFactories: () => IterableIterator<EmbeddableFactory>;
@@ -103,7 +103,7 @@ export interface EmbeddableStart extends PersistableStateService<EmbeddableState
       [ATTRIBUTE_SERVICE_KEY]: A;
     },
     R extends SavedObjectEmbeddableInput = SavedObjectEmbeddableInput
-  >(
+    >(
     type: string,
     options: AttributeServiceOptions<A>
   ) => AttributeService<A, V, R>;
@@ -124,7 +124,7 @@ export class EmbeddablePublicPlugin implements Plugin<EmbeddableSetup, Embeddabl
   private appList?: ReadonlyMap<string, PublicAppInfo>;
   private appListSubscription?: Subscription;
 
-  constructor(initializerContext: PluginInitializerContext) {}
+  constructor(initializerContext: PluginInitializerContext) { }
 
   public setup(core: CoreSetup, { uiActions }: EmbeddableSetupDependencies) {
     bootstrap(uiActions);
@@ -174,20 +174,29 @@ export class EmbeddablePublicPlugin implements Plugin<EmbeddableSetup, Embeddabl
       embeddable: IEmbeddable;
       hideHeader?: boolean;
     }) => (
-      <EmbeddablePanel
-        hideHeader={hideHeader}
-        embeddable={embeddable}
-        stateTransfer={stateTransfer ? stateTransfer : this.outgoingOnlyStateTransfer}
-        getActions={uiActions.getTriggerCompatibleActions}
-        getEmbeddableFactory={this.getEmbeddableFactory}
-        getAllEmbeddableFactories={this.getEmbeddableFactories}
-        overlays={core.overlays}
-        notifications={core.notifications}
-        application={core.application}
-        inspector={inspector}
-        SavedObjectFinder={getSavedObjectFinder(core.savedObjects, core.uiSettings)}
-      />
-    );
+        // equivalent to WidgetContainer
+        <EmbeddablePanel
+          hideHeader={hideHeader}
+          // our Component
+          embeddable={embeddable}
+          // stateTransfer from history (url ?)
+          stateTransfer={stateTransfer ? stateTransfer : this.outgoingOnlyStateTransfer}
+          getActions={uiActions.getTriggerCompatibleActions}
+          // according to type
+          getEmbeddableFactory={this.getEmbeddableFactory}
+          // ?
+          getAllEmbeddableFactories={this.getEmbeddableFactories}
+          overlays={core.overlays}
+          // core service to notify
+          notifications={core.notifications}
+          // core service 
+          application={core.application}
+          //  Data sidebar with data of the chart
+          inspector={inspector}
+          // ui for finding saved object
+          SavedObjectFinder={getSavedObjectFinder(core.savedObjects, core.uiSettings)}
+        />
+      );
 
     const commonContract = {
       getEmbeddableFactory: this.getEmbeddableFactory,

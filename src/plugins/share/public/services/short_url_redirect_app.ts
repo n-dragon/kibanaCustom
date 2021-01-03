@@ -34,6 +34,9 @@ export const createShortUrlRedirectApp = (core: CoreSetup, location: Location) =
 
     const response = await core.http.get<{ url: string }>(getUrlPath(urlId));
     const redirectUrl = response.url;
+    // required Bundles dependencies....
+    // not inject dynamically but import from code
+    // declare as  extraPublicDir by kibanaUtils plugin
     const { hashUrl } = await import('../../../kibana_utils/public');
     const hashedUrl = hashUrl(redirectUrl);
     const url = core.http.basePath.prepend(hashedUrl);

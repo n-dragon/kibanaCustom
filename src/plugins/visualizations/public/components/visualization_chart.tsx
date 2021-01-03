@@ -35,7 +35,9 @@ interface VisualizationChartProps {
 }
 
 class VisualizationChart extends React.Component<VisualizationChartProps> {
+  // resize with Event?
   private resizeChecker?: ResizeChecker;
+  // visualisation 
   private visualization?: VisualizationController;
   private chartDiv = React.createRef<HTMLDivElement>();
   private containerDiv = React.createRef<HTMLDivElement>();
@@ -50,6 +52,7 @@ class VisualizationChart extends React.Component<VisualizationChartProps> {
     super(props);
 
     this.renderSubject = new Rx.Subject();
+    // subscribe to subject with rxJs
     const render$ = this.renderSubject.asObservable().pipe(share());
 
     const success$ = render$.pipe(
@@ -74,6 +77,7 @@ class VisualizationChart extends React.Component<VisualizationChartProps> {
     });
   }
 
+  // rendering only div container
   public render() {
     return (
       <div className="visChart__container kbn-resetFocusState" tabIndex={0} ref={this.containerDiv}>
@@ -102,9 +106,11 @@ class VisualizationChart extends React.Component<VisualizationChartProps> {
     // have rendered and the div is always rendered into the tree (i.e. not
     // inside any condition).
     this.resizeChecker = new ResizeChecker(this.containerDiv.current);
+    // render 
     this.resizeChecker.on('resize', () => this.startRenderVisualization());
 
     if (this.props.listenOnChange) {
+      // sub to uiState Change
       this.props.uiState.on('change', this.onUiStateChanged);
     }
 
@@ -131,6 +137,7 @@ class VisualizationChart extends React.Component<VisualizationChartProps> {
     this.startRenderVisualization();
   };
 
+  // emit event to render with data vis and param
   private startRenderVisualization(): void {
     if (this.containerDiv.current && this.chartDiv.current) {
       this.renderSubject.next({

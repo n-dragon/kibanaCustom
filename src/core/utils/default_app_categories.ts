@@ -24,8 +24,8 @@ import { AppCategory } from '../types';
 export const DEFAULT_APP_CATEGORIES: Record<string, AppCategory> = Object.freeze({
   kibana: {
     id: 'kibana',
-    label: i18n.translate('core.ui.kibanaNavList.label', {
-      defaultMessage: 'Analytics',
+    label: i18n.translate('core.ui.kibazanaNavList.label', {
+      defaultMessage: 'Studio',
     }),
     euiIconType: 'logoKibana',
     order: 1000,

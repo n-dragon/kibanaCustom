@@ -69,6 +69,7 @@ function DefaultEditorSideBar({
   const responseAggs = useMemo(() => (state.data.aggs ? state.data.aggs.getResponseAggs() : []), [
     state.data.aggs,
   ]);
+  // schemas ?
   const metricSchemas = (vis.type.schemas.metrics || []).map((s: Schema) => s.name);
   const metricAggs = useMemo(
     () => responseAggs.filter((agg) => agg.schema && metricSchemas.includes(agg.schema)),
@@ -103,6 +104,7 @@ function DefaultEditorSideBar({
     }
 
     vis.setState({
+      // every visualization can be serialized
       ...vis.serialize(),
       params: state.params,
       data: {

@@ -110,6 +110,7 @@ function DefaultEditor({
               embeddableHandler={embeddableHandler}
               isCollapsed={isCollapsed}
               onClickCollapse={onClickCollapse}
+              // visualisation
               vis={vis}
               uiState={uiState}
               isLinkedSearch={linked}

@@ -198,7 +198,7 @@ const TopNav = ({
      * it is enabled by default in the TopNavMenu component.
      */
     <TopNavMenu
-      appName={APP_NAME}
+      appName={"test visualize"}
       config={config}
       setMenuMountPoint={setHeaderActionMenu}
       onQuerySubmit={handleRefresh}

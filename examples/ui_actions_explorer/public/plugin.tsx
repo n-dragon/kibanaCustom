@@ -70,6 +70,7 @@ declare module '../../../src/plugins/ui_actions/public' {
 
 export class UiActionsExplorerPlugin implements Plugin<void, void, {}, StartDeps> {
   public setup(core: CoreSetup<StartDeps>, deps: SetupDeps) {
+    console.log("YATA setup");
     deps.uiActions.registerTrigger({
       id: COUNTRY_TRIGGER,
     });
@@ -131,7 +132,10 @@ export class UiActionsExplorerPlugin implements Plugin<void, void, {}, StartDeps
     });
   }
 
-  public start() {}
+  public start() {
 
-  public stop() {}
+    console.log("YATA");
+  }
+
+  public stop() { }
 }

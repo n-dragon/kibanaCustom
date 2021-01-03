@@ -53,6 +53,7 @@ export class MetricVisPlugin implements Plugin<void, void> {
     core: CoreSetup,
     { expressions, visualizations, charts }: MetricVisPluginSetupDependencies
   ) {
+    // function to create config input 
     expressions.registerFunction(createMetricVisFn);
     expressions.registerRenderer(metricVisRenderer);
     visualizations.createBaseVisualization(createMetricVisTypeDefinition());

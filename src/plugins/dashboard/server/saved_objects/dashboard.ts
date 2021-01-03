@@ -56,6 +56,7 @@ export const createDashboardSavedObjectType = ({
         properties: { searchSourceJSON: { type: 'text', index: false } },
       },
       optionsJSON: { type: 'text', index: false },
+      // viz here?
       panelsJSON: { type: 'text', index: false },
       refreshInterval: {
         properties: {

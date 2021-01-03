@@ -1,0 +1,4568 @@
+[
+    {
+        "id": "advancedSettings",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "management"
+        ],
+        "optionalPlugins": [
+            "home",
+            "usageCollection"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "home"
+        ]
+    },
+    {
+        "id": "dashboard",
+        "version": "kibana",
+        "requiredPlugins": [
+            "data",
+            "embeddable",
+            "inspector",
+            "kibanaLegacy",
+            "urlForwarding",
+            "navigation",
+            "uiActions",
+            "savedObjects"
+        ],
+        "optionalPlugins": [
+            "home",
+            "share",
+            "usageCollection",
+            "savedObjectsTaggingOss"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact",
+            "home"
+        ]
+    },
+    {
+        "id": "bfetch",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaUtils"
+        ]
+    },
+    {
+        "id": "charts",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "expressions"
+        ],
+        "requiredBundles": [
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "data",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "bfetch",
+            "expressions",
+            "uiActions",
+            "share"
+        ],
+        "optionalPlugins": [
+            "usageCollection"
+        ],
+        "extraPublicDirs": [
+            "common"
+        ],
+        "requiredBundles": [
+            "usageCollection",
+            "kibanaUtils",
+            "kibanaReact",
+            "inspector"
+        ]
+    },
+    {
+        "id": "devTools",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [
+            "urlForwarding"
+        ]
+    },
+    {
+        "id": "discover",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "charts",
+            "data",
+            "embeddable",
+            "inspector",
+            "kibanaLegacy",
+            "urlForwarding",
+            "navigation",
+            "uiActions",
+            "savedObjects"
+        ],
+        "optionalPlugins": [
+            "home",
+            "share",
+            "usageCollection"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "home",
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "embeddable",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "inspector",
+            "uiActions"
+        ],
+        "extraPublicDirs": [
+            "public/lib/test_samples"
+        ],
+        "requiredBundles": [
+            "savedObjects",
+            "kibanaReact",
+            "kibanaUtils"
+        ]
+    },
+    {
+        "id": "home",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "urlForwarding"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "telemetry"
+        ],
+        "requiredBundles": [
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "console",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "devTools"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "home"
+        ],
+        "requiredBundles": [
+            "esUiShared",
+            "kibanaReact",
+            "kibanaUtils",
+            "home"
+        ]
+    },
+    {
+        "id": "expressions",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "extraPublicDirs": [
+            "common",
+            "common/fonts"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "inspector"
+        ]
+    },
+    {
+        "id": "esUiShared",
+        "version": "kibana",
+        "ui": true,
+        "server": true,
+        "extraPublicDirs": [
+            "static/validators/string",
+            "static/forms/hook_form_lib",
+            "static/forms/helpers",
+            "static/forms/components",
+            "static/forms/helpers/field_validators/types"
+        ],
+        "requiredBundles": [
+            "data"
+        ]
+    },
+    {
+        "id": "inspector",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "extraPublicDirs": [
+            "common",
+            "common/adapters/request"
+        ],
+        "requiredBundles": [
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "apmOss",
+        "version": "8.0.0",
+        "server": true,
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "apm_oss"
+        ],
+        "ui": true,
+        "requiredPlugins": [
+            "home"
+        ]
+    },
+    {
+        "id": "kibanaLegacy",
+        "version": "kibana",
+        "server": true,
+        "ui": true
+    },
+    {
+        "id": "inputControlVis",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "expressions",
+            "visualizations",
+            "visDefaultEditor"
+        ],
+        "requiredBundles": [
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "indexPatternManagement",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "management",
+            "data",
+            "urlForwarding"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "kibanaUtils"
+        ]
+    },
+    {
+        "id": "kibanaOverview",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [
+            "navigation",
+            "data",
+            "home"
+        ],
+        "optionalPlugins": [
+            "newsfeed"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "newsfeed"
+        ]
+    },
+    {
+        "id": "kibanaReact",
+        "version": "kibana",
+        "ui": true,
+        "server": false,
+        "requiredBundles": [
+            "kibanaUtils"
+        ]
+    },
+    {
+        "id": "legacyExport",
+        "version": "kibana",
+        "server": true,
+        "ui": false
+    },
+    {
+        "id": "kibanaUsageCollection",
+        "version": "kibana",
+        "server": true,
+        "ui": false,
+        "requiredPlugins": [
+            "usageCollection"
+        ],
+        "optionalPlugins": []
+    },
+    {
+        "id": "kibanaUtils",
+        "version": "kibana",
+        "ui": true,
+        "server": false,
+        "extraPublicDirs": [
+            "common",
+            "demos/state_containers/todomvc",
+            "common/state_containers"
+        ]
+    },
+    {
+        "id": "lensOss",
+        "version": "kibana",
+        "ui": true,
+        "server": true,
+        "requiredPlugins": [
+            "visualizations"
+        ],
+        "extraPublicDirs": [
+            "common/constants"
+        ]
+    },
+    {
+        "id": "management",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "optionalPlugins": [
+            "home"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "kibanaUtils",
+            "home"
+        ]
+    },
+    {
+        "id": "mapsLegacy",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "map"
+        ],
+        "ui": true,
+        "server": true,
+        "extraPublicDirs": [
+            "common"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "charts"
+        ]
+    },
+    {
+        "id": "mapsOss",
+        "version": "kibana",
+        "ui": true,
+        "server": true,
+        "requiredPlugins": [
+            "visualizations"
+        ],
+        "extraPublicDirs": [
+            "common/constants"
+        ]
+    },
+    {
+        "id": "navigation",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [
+            "data"
+        ],
+        "requiredBundles": [
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "newsfeed",
+        "version": "kibana",
+        "server": true,
+        "ui": true
+    },
+    {
+        "id": "regionMap",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "map",
+            "regionmap"
+        ],
+        "ui": true,
+        "server": true,
+        "requiredPlugins": [
+            "visualizations",
+            "expressions",
+            "mapsLegacy",
+            "kibanaLegacy",
+            "data",
+            "share"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "charts",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "savedObjectsManagement",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "management",
+            "data"
+        ],
+        "optionalPlugins": [
+            "dashboard",
+            "visualizations",
+            "discover",
+            "home",
+            "savedObjectsTaggingOss"
+        ],
+        "extraPublicDirs": [
+            "public/lib"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "home"
+        ]
+    },
+    {
+        "id": "savedObjects",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "securityOss",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "security"
+        ],
+        "ui": true,
+        "server": true,
+        "requiredPlugins": [],
+        "requiredBundles": []
+    },
+    {
+        "id": "savedObjectsTaggingOss",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [],
+        "optionalPlugins": [
+            "savedObjects"
+        ]
+    },
+    {
+        "id": "share",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaUtils"
+        ]
+    },
+    {
+        "id": "telemetry",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "telemetryCollectionManager",
+            "usageCollection"
+        ],
+        "extraPublicDirs": [
+            "common/constants"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "tileMap",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "map",
+            "tilemap"
+        ],
+        "ui": true,
+        "server": true,
+        "requiredPlugins": [
+            "visualizations",
+            "expressions",
+            "mapsLegacy",
+            "kibanaLegacy",
+            "data",
+            "share"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "charts",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "telemetryManagementSection",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [
+            "advancedSettings",
+            "telemetry"
+        ]
+    },
+    {
+        "id": "telemetryCollectionManager",
+        "version": "kibana",
+        "server": true,
+        "ui": false,
+        "requiredPlugins": [
+            "usageCollection"
+        ],
+        "optionalPlugins": []
+    },
+    {
+        "id": "timelion",
+        "version": "kibana",
+        "ui": true,
+        "server": true,
+        "requiredBundles": [
+            "kibanaLegacy",
+            "kibanaUtils",
+            "visTypeTimelion"
+        ],
+        "requiredPlugins": [
+            "visualizations",
+            "data",
+            "navigation",
+            "visTypeTimelion",
+            "savedObjects",
+            "kibanaLegacy"
+        ]
+    },
+    {
+        "id": "uiActions",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "extraPublicDirs": [
+            "public/tests/test_samples"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "urlForwarding",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [
+            "kibanaLegacy"
+        ]
+    },
+    {
+        "id": "usageCollection",
+        "configPath": [
+            "usageCollection"
+        ],
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaUtils"
+        ]
+    },
+    {
+        "id": "visualizations",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "expressions",
+            "uiActions",
+            "embeddable",
+            "inspector",
+            "savedObjects"
+        ],
+        "optionalPlugins": [
+            "usageCollection"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "discover"
+        ]
+    },
+    {
+        "id": "visualize",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "urlForwarding",
+            "navigation",
+            "savedObjects",
+            "visualizations",
+            "embeddable",
+            "dashboard",
+            "uiActions"
+        ],
+        "optionalPlugins": [
+            "home",
+            "share",
+            "savedObjectsTaggingOss"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact",
+            "home",
+            "discover",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "visTypeMarkdown",
+        "version": "kibana",
+        "ui": true,
+        "server": true,
+        "requiredPlugins": [
+            "expressions",
+            "visualizations"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "charts",
+            "visualizations",
+            "expressions",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "visTypeMetric",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "visualizations",
+            "charts",
+            "expressions"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "visTypeTable",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "expressions",
+            "visualizations",
+            "data",
+            "kibanaLegacy"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "share",
+            "charts",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "visDefaultEditor",
+        "version": "kibana",
+        "ui": true,
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact",
+            "data"
+        ]
+    },
+    {
+        "id": "visTypeTagcloud",
+        "version": "kibana",
+        "ui": true,
+        "server": true,
+        "requiredPlugins": [
+            "data",
+            "expressions",
+            "visualizations",
+            "charts"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "visTypeTimelion",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "visualizations",
+            "data",
+            "expressions"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "visTypeTimeseries",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "charts",
+            "data",
+            "expressions",
+            "visualizations"
+        ],
+        "optionalPlugins": [
+            "usageCollection"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "visTypeVega",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "visualizations",
+            "mapsLegacy",
+            "expressions",
+            "inspector"
+        ],
+        "optionalPlugins": [
+            "home",
+            "usageCollection"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "visTypeVislib",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "charts",
+            "data",
+            "expressions",
+            "visualizations",
+            "kibanaLegacy"
+        ],
+        "optionalPlugins": [
+            "visTypeXy"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "visTypeXy",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "charts",
+            "expressions",
+            "visualizations"
+        ]
+    },
+    {
+        "id": "advancedSettings",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "management"
+        ],
+        "optionalPlugins": [
+            "home",
+            "usageCollection"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "home"
+        ]
+    },
+    {
+        "id": "apmOss",
+        "version": "8.0.0",
+        "server": true,
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "apm_oss"
+        ],
+        "ui": true,
+        "requiredPlugins": [
+            "home"
+        ]
+    },
+    {
+        "id": "bfetch",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaUtils"
+        ]
+    },
+    {
+        "id": "charts",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "expressions"
+        ],
+        "requiredBundles": [
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "console",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "devTools"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "home"
+        ],
+        "requiredBundles": [
+            "esUiShared",
+            "kibanaReact",
+            "kibanaUtils",
+            "home"
+        ]
+    },
+    {
+        "id": "data",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "bfetch",
+            "expressions",
+            "uiActions",
+            "share"
+        ],
+        "optionalPlugins": [
+            "usageCollection"
+        ],
+        "extraPublicDirs": [
+            "common"
+        ],
+        "requiredBundles": [
+            "usageCollection",
+            "kibanaUtils",
+            "kibanaReact",
+            "inspector"
+        ]
+    },
+    {
+        "id": "dashboard",
+        "version": "kibana",
+        "requiredPlugins": [
+            "data",
+            "embeddable",
+            "inspector",
+            "kibanaLegacy",
+            "urlForwarding",
+            "navigation",
+            "uiActions",
+            "savedObjects"
+        ],
+        "optionalPlugins": [
+            "home",
+            "share",
+            "usageCollection",
+            "savedObjectsTaggingOss"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact",
+            "home"
+        ]
+    },
+    {
+        "id": "discover",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "charts",
+            "data",
+            "embeddable",
+            "inspector",
+            "kibanaLegacy",
+            "urlForwarding",
+            "navigation",
+            "uiActions",
+            "savedObjects"
+        ],
+        "optionalPlugins": [
+            "home",
+            "share",
+            "usageCollection"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "home",
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "devTools",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [
+            "urlForwarding"
+        ]
+    },
+    {
+        "id": "embeddable",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "inspector",
+            "uiActions"
+        ],
+        "extraPublicDirs": [
+            "public/lib/test_samples"
+        ],
+        "requiredBundles": [
+            "savedObjects",
+            "kibanaReact",
+            "kibanaUtils"
+        ]
+    },
+    {
+        "id": "esUiShared",
+        "version": "kibana",
+        "ui": true,
+        "server": true,
+        "extraPublicDirs": [
+            "static/validators/string",
+            "static/forms/hook_form_lib",
+            "static/forms/helpers",
+            "static/forms/components",
+            "static/forms/helpers/field_validators/types"
+        ],
+        "requiredBundles": [
+            "data"
+        ]
+    },
+    {
+        "id": "expressions",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "extraPublicDirs": [
+            "common",
+            "common/fonts"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "inspector"
+        ]
+    },
+    {
+        "id": "indexPatternManagement",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "management",
+            "data",
+            "urlForwarding"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "kibanaUtils"
+        ]
+    },
+    {
+        "id": "home",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "urlForwarding"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "telemetry"
+        ],
+        "requiredBundles": [
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "kibanaLegacy",
+        "version": "kibana",
+        "server": true,
+        "ui": true
+    },
+    {
+        "id": "inspector",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "extraPublicDirs": [
+            "common",
+            "common/adapters/request"
+        ],
+        "requiredBundles": [
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "inputControlVis",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "expressions",
+            "visualizations",
+            "visDefaultEditor"
+        ],
+        "requiredBundles": [
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "kibanaUtils",
+        "version": "kibana",
+        "ui": true,
+        "server": false,
+        "extraPublicDirs": [
+            "common",
+            "demos/state_containers/todomvc",
+            "common/state_containers"
+        ]
+    },
+    {
+        "id": "kibanaUsageCollection",
+        "version": "kibana",
+        "server": true,
+        "ui": false,
+        "requiredPlugins": [
+            "usageCollection"
+        ],
+        "optionalPlugins": []
+    },
+    {
+        "id": "kibanaOverview",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [
+            "navigation",
+            "data",
+            "home"
+        ],
+        "optionalPlugins": [
+            "newsfeed"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "newsfeed"
+        ]
+    },
+    {
+        "id": "kibanaReact",
+        "version": "kibana",
+        "ui": true,
+        "server": false,
+        "requiredBundles": [
+            "kibanaUtils"
+        ]
+    },
+    {
+        "id": "legacyExport",
+        "version": "kibana",
+        "server": true,
+        "ui": false
+    },
+    {
+        "id": "mapsLegacy",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "map"
+        ],
+        "ui": true,
+        "server": true,
+        "extraPublicDirs": [
+            "common"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "charts"
+        ]
+    },
+    {
+        "id": "lensOss",
+        "version": "kibana",
+        "ui": true,
+        "server": true,
+        "requiredPlugins": [
+            "visualizations"
+        ],
+        "extraPublicDirs": [
+            "common/constants"
+        ]
+    },
+    {
+        "id": "regionMap",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "map",
+            "regionmap"
+        ],
+        "ui": true,
+        "server": true,
+        "requiredPlugins": [
+            "visualizations",
+            "expressions",
+            "mapsLegacy",
+            "kibanaLegacy",
+            "data",
+            "share"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "charts",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "management",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "optionalPlugins": [
+            "home"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "kibanaUtils",
+            "home"
+        ]
+    },
+    {
+        "id": "navigation",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [
+            "data"
+        ],
+        "requiredBundles": [
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "mapsOss",
+        "version": "kibana",
+        "ui": true,
+        "server": true,
+        "requiredPlugins": [
+            "visualizations"
+        ],
+        "extraPublicDirs": [
+            "common/constants"
+        ]
+    },
+    {
+        "id": "newsfeed",
+        "version": "kibana",
+        "server": true,
+        "ui": true
+    },
+    {
+        "id": "savedObjectsTaggingOss",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [],
+        "optionalPlugins": [
+            "savedObjects"
+        ]
+    },
+    {
+        "id": "savedObjectsManagement",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "management",
+            "data"
+        ],
+        "optionalPlugins": [
+            "dashboard",
+            "visualizations",
+            "discover",
+            "home",
+            "savedObjectsTaggingOss"
+        ],
+        "extraPublicDirs": [
+            "public/lib"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "home"
+        ]
+    },
+    {
+        "id": "savedObjects",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "share",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaUtils"
+        ]
+    },
+    {
+        "id": "securityOss",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "security"
+        ],
+        "ui": true,
+        "server": true,
+        "requiredPlugins": [],
+        "requiredBundles": []
+    },
+    {
+        "id": "telemetry",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "telemetryCollectionManager",
+            "usageCollection"
+        ],
+        "extraPublicDirs": [
+            "common/constants"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "telemetryCollectionManager",
+        "version": "kibana",
+        "server": true,
+        "ui": false,
+        "requiredPlugins": [
+            "usageCollection"
+        ],
+        "optionalPlugins": []
+    },
+    {
+        "id": "telemetryManagementSection",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [
+            "advancedSettings",
+            "telemetry"
+        ]
+    },
+    {
+        "id": "timelion",
+        "version": "kibana",
+        "ui": true,
+        "server": true,
+        "requiredBundles": [
+            "kibanaLegacy",
+            "kibanaUtils",
+            "visTypeTimelion"
+        ],
+        "requiredPlugins": [
+            "visualizations",
+            "data",
+            "navigation",
+            "visTypeTimelion",
+            "savedObjects",
+            "kibanaLegacy"
+        ]
+    },
+    {
+        "id": "uiActions",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "extraPublicDirs": [
+            "public/tests/test_samples"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "tileMap",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "map",
+            "tilemap"
+        ],
+        "ui": true,
+        "server": true,
+        "requiredPlugins": [
+            "visualizations",
+            "expressions",
+            "mapsLegacy",
+            "kibanaLegacy",
+            "data",
+            "share"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "charts",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "urlForwarding",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [
+            "kibanaLegacy"
+        ]
+    },
+    {
+        "id": "usageCollection",
+        "configPath": [
+            "usageCollection"
+        ],
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaUtils"
+        ]
+    },
+    {
+        "id": "visualizations",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "expressions",
+            "uiActions",
+            "embeddable",
+            "inspector",
+            "savedObjects"
+        ],
+        "optionalPlugins": [
+            "usageCollection"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "discover"
+        ]
+    },
+    {
+        "id": "visTypeMarkdown",
+        "version": "kibana",
+        "ui": true,
+        "server": true,
+        "requiredPlugins": [
+            "expressions",
+            "visualizations"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "charts",
+            "visualizations",
+            "expressions",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "visTypeMetric",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "visualizations",
+            "charts",
+            "expressions"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "visDefaultEditor",
+        "version": "kibana",
+        "ui": true,
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact",
+            "data"
+        ]
+    },
+    {
+        "id": "visualize",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "urlForwarding",
+            "navigation",
+            "savedObjects",
+            "visualizations",
+            "embeddable",
+            "dashboard",
+            "uiActions"
+        ],
+        "optionalPlugins": [
+            "home",
+            "share",
+            "savedObjectsTaggingOss"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact",
+            "home",
+            "discover",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "visTypeTable",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "expressions",
+            "visualizations",
+            "data",
+            "kibanaLegacy"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "share",
+            "charts",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "visTypeTagcloud",
+        "version": "kibana",
+        "ui": true,
+        "server": true,
+        "requiredPlugins": [
+            "data",
+            "expressions",
+            "visualizations",
+            "charts"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "visTypeTimelion",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "visualizations",
+            "data",
+            "expressions"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "visTypeTimeseries",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "charts",
+            "data",
+            "expressions",
+            "visualizations"
+        ],
+        "optionalPlugins": [
+            "usageCollection"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "visTypeVega",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "visualizations",
+            "mapsLegacy",
+            "expressions",
+            "inspector"
+        ],
+        "optionalPlugins": [
+            "home",
+            "usageCollection"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "visTypeVislib",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "charts",
+            "data",
+            "expressions",
+            "visualizations",
+            "kibanaLegacy"
+        ],
+        "optionalPlugins": [
+            "visTypeXy"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "visDefaultEditor"
+        ]
+    },
+    {
+        "id": "visTypeXy",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "charts",
+            "expressions",
+            "visualizations"
+        ]
+    },
+    {
+        "id": "actions",
+        "server": true,
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "actions"
+        ],
+        "requiredPlugins": [
+            "licensing",
+            "taskManager",
+            "encryptedSavedObjects",
+            "eventLog",
+            "features"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "spaces",
+            "security"
+        ],
+        "ui": false
+    },
+    {
+        "id": "apm",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "features",
+            "apmOss",
+            "data",
+            "licensing",
+            "triggersActionsUi",
+            "embeddable"
+        ],
+        "optionalPlugins": [
+            "cloud",
+            "usageCollection",
+            "taskManager",
+            "actions",
+            "alerts",
+            "observability",
+            "security",
+            "ml",
+            "home"
+        ],
+        "server": true,
+        "ui": true,
+        "configPath": [
+            "xpack",
+            "apm"
+        ],
+        "extraPublicDirs": [
+            "public/style/variables"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "kibanaUtils",
+            "observability",
+            "home",
+            "maps",
+            "ml"
+        ]
+    },
+    {
+        "id": "beatsManagement",
+        "configPath": [
+            "xpack",
+            "beats_management"
+        ],
+        "ui": true,
+        "server": true,
+        "version": "kibana",
+        "requiredPlugins": [
+            "data",
+            "licensing",
+            "management",
+            "features"
+        ],
+        "optionalPlugins": [
+            "security"
+        ]
+    },
+    {
+        "configPath": [
+            "xpack",
+            "case"
+        ],
+        "id": "case",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "actions"
+        ],
+        "optionalPlugins": [
+            "spaces",
+            "security"
+        ],
+        "server": true,
+        "ui": false,
+        "version": "8.0.0"
+    },
+    {
+        "id": "canvas",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "canvas"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "bfetch",
+            "data",
+            "embeddable",
+            "expressions",
+            "features",
+            "inspector",
+            "uiActions",
+            "charts"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "home"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "maps",
+            "lens",
+            "visualizations",
+            "kibanaUtils",
+            "kibanaLegacy",
+            "discover",
+            "savedObjects",
+            "reporting",
+            "home"
+        ]
+    },
+    {
+        "id": "cloud",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "cloud"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "home",
+            "security"
+        ],
+        "server": true,
+        "ui": true
+    },
+    {
+        "id": "consoleExtensions",
+        "version": "1.0.0",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "console"
+        ],
+        "server": true,
+        "ui": false
+    },
+    {
+        "id": "alerts",
+        "server": true,
+        "ui": true,
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "alerts"
+        ],
+        "requiredPlugins": [
+            "licensing",
+            "taskManager",
+            "encryptedSavedObjects",
+            "actions",
+            "eventLog",
+            "features"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "spaces",
+            "security"
+        ],
+        "extraPublicDirs": [
+            "common",
+            "common/parse_duration"
+        ]
+    },
+    {
+        "id": "dashboardEnhanced",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "uiActionsEnhanced",
+            "embeddable",
+            "dashboard",
+            "share"
+        ],
+        "configPath": [
+            "xpack",
+            "dashboardEnhanced"
+        ],
+        "requiredBundles": [
+            "embeddable",
+            "kibanaUtils",
+            "embeddableEnhanced",
+            "kibanaReact",
+            "uiActions"
+        ]
+    },
+    {
+        "id": "code",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "code"
+        ],
+        "server": true,
+        "ui": false
+    },
+    {
+        "id": "dataEnhanced",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "data_enhanced"
+        ],
+        "requiredPlugins": [
+            "bfetch",
+            "data",
+            "features"
+        ],
+        "optionalPlugins": [
+            "kibanaUtils",
+            "usageCollection"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "crossClusterReplication",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "home",
+            "licensing",
+            "management",
+            "remoteClusters",
+            "indexManagement",
+            "features"
+        ],
+        "optionalPlugins": [
+            "usageCollection"
+        ],
+        "configPath": [
+            "xpack",
+            "ccr"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "esUiShared",
+            "data"
+        ]
+    },
+    {
+        "id": "discoverEnhanced",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "uiActions",
+            "embeddable",
+            "discover"
+        ],
+        "optionalPlugins": [
+            "share",
+            "kibanaLegacy",
+            "usageCollection"
+        ],
+        "configPath": [
+            "xpack",
+            "discoverEnhanced"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "data",
+            "share"
+        ]
+    },
+    {
+        "id": "encryptedSavedObjects",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "encryptedSavedObjects"
+        ],
+        "optionalPlugins": [
+            "security"
+        ],
+        "server": true,
+        "ui": false
+    },
+    {
+        "id": "enterpriseSearch",
+        "version": "kibana",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "features",
+            "licensing"
+        ],
+        "configPath": [
+            "enterpriseSearch"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "security",
+            "home",
+            "spaces",
+            "cloud"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "home"
+        ]
+    },
+    {
+        "id": "embeddableEnhanced",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [
+            "embeddable",
+            "kibanaReact",
+            "uiActions",
+            "uiActionsEnhanced"
+        ]
+    },
+    {
+        "id": "eventLog",
+        "version": "0.0.1",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "eventLog"
+        ],
+        "optionalPlugins": [
+            "spaces"
+        ],
+        "server": true,
+        "ui": false
+    },
+    {
+        "id": "features",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "licensing"
+        ],
+        "optionalPlugins": [
+            "visTypeTimelion"
+        ],
+        "configPath": [
+            "xpack",
+            "features"
+        ],
+        "server": true,
+        "ui": true,
+        "extraPublicDirs": [
+            "common"
+        ]
+    },
+    {
+        "id": "fleet",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "configPath": [
+            "xpack",
+            "fleet"
+        ],
+        "requiredPlugins": [
+            "licensing",
+            "data",
+            "encryptedSavedObjects"
+        ],
+        "optionalPlugins": [
+            "security",
+            "features",
+            "cloud",
+            "usageCollection",
+            "home"
+        ],
+        "extraPublicDirs": [
+            "common"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "esUiShared",
+            "home",
+            "infra",
+            "kibanaUtils"
+        ]
+    },
+    {
+        "id": "globalSearch",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "licensing"
+        ],
+        "optionalPlugins": [],
+        "configPath": [
+            "xpack",
+            "global_search"
+        ]
+    },
+    {
+        "id": "dashboardMode",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "dashboard_mode"
+        ],
+        "optionalPlugins": [
+            "security"
+        ],
+        "requiredPlugins": [
+            "kibanaLegacy",
+            "urlForwarding",
+            "dashboard"
+        ],
+        "server": true,
+        "ui": true
+    },
+    {
+        "id": "fileUpload",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "usageCollection"
+        ]
+    },
+    {
+        "id": "globalSearchProviders",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "globalSearch"
+        ],
+        "optionalPlugins": [],
+        "configPath": [
+            "xpack",
+            "global_search_providers"
+        ]
+    },
+    {
+        "id": "globalSearchBar",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [
+            "globalSearch"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "savedObjectsTagging"
+        ],
+        "configPath": [
+            "xpack",
+            "global_search_bar"
+        ]
+    },
+    {
+        "id": "infra",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "features",
+            "usageCollection",
+            "spaces",
+            "data",
+            "dataEnhanced",
+            "visTypeTimeseries",
+            "alerts",
+            "triggersActionsUi"
+        ],
+        "optionalPlugins": [
+            "ml",
+            "observability",
+            "home"
+        ],
+        "server": true,
+        "ui": true,
+        "configPath": [
+            "xpack",
+            "infra"
+        ],
+        "requiredBundles": [
+            "observability",
+            "licenseManagement",
+            "kibanaUtils",
+            "kibanaReact",
+            "apm",
+            "home"
+        ]
+    },
+    {
+        "id": "graph",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "licensing",
+            "data",
+            "navigation",
+            "savedObjects",
+            "kibanaLegacy"
+        ],
+        "optionalPlugins": [
+            "home",
+            "features"
+        ],
+        "configPath": [
+            "xpack",
+            "graph"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact",
+            "home"
+        ]
+    },
+    {
+        "id": "indexManagement",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "home",
+            "licensing",
+            "management",
+            "features",
+            "share"
+        ],
+        "optionalPlugins": [
+            "security",
+            "usageCollection",
+            "fleet"
+        ],
+        "configPath": [
+            "xpack",
+            "index_management"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "esUiShared",
+            "runtimeFields"
+        ]
+    },
+    {
+        "id": "indexLifecycleManagement",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "licensing",
+            "management",
+            "features",
+            "share"
+        ],
+        "optionalPlugins": [
+            "cloud",
+            "usageCollection",
+            "indexManagement",
+            "home"
+        ],
+        "configPath": [
+            "xpack",
+            "ilm"
+        ],
+        "requiredBundles": [
+            "indexManagement",
+            "kibanaReact",
+            "esUiShared",
+            "home"
+        ]
+    },
+    {
+        "id": "lens",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "charts",
+            "expressions",
+            "navigation",
+            "urlForwarding",
+            "visualizations",
+            "dashboard",
+            "charts",
+            "uiActions",
+            "embeddable",
+            "share"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "taskManager",
+            "globalSearch",
+            "savedObjectsTagging"
+        ],
+        "configPath": [
+            "xpack",
+            "lens"
+        ],
+        "extraPublicDirs": [
+            "common/constants"
+        ],
+        "requiredBundles": [
+            "savedObjects",
+            "kibanaUtils",
+            "kibanaReact",
+            "embeddable",
+            "lensOss"
+        ]
+    },
+    {
+        "id": "grokdebugger",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "licensing",
+            "home",
+            "devTools"
+        ],
+        "server": true,
+        "ui": true,
+        "configPath": [
+            "xpack",
+            "grokdebugger"
+        ],
+        "requiredBundles": [
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "ingestPipelines",
+        "version": "8.0.0",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "licensing",
+            "management",
+            "features",
+            "share"
+        ],
+        "optionalPlugins": [
+            "security",
+            "usageCollection"
+        ],
+        "configPath": [
+            "xpack",
+            "ingest_pipelines"
+        ],
+        "requiredBundles": [
+            "esUiShared",
+            "kibanaReact"
+        ]
+    },
+    {
+        "configPath": [
+            "xpack",
+            "lists"
+        ],
+        "extraPublicDirs": [
+            "common"
+        ],
+        "id": "lists",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [],
+        "optionalPlugins": [
+            "spaces",
+            "security"
+        ],
+        "requiredBundles": [
+            "securitySolution"
+        ],
+        "server": true,
+        "ui": true,
+        "version": "8.0.0"
+    },
+    {
+        "id": "licensing",
+        "version": "0.0.1",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "licensing"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "mapsLegacyLicensing",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [
+            "licensing",
+            "mapsLegacy"
+        ]
+    },
+    {
+        "id": "maps",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "maps"
+        ],
+        "requiredPlugins": [
+            "licensing",
+            "features",
+            "inspector",
+            "data",
+            "fileUpload",
+            "uiActions",
+            "navigation",
+            "visualizations",
+            "dashboard",
+            "embeddable",
+            "mapsLegacy",
+            "usageCollection",
+            "savedObjects",
+            "share"
+        ],
+        "optionalPlugins": [
+            "home",
+            "savedObjectsTagging"
+        ],
+        "ui": true,
+        "server": true,
+        "extraPublicDirs": [
+            "common/constants"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "kibanaUtils",
+            "home",
+            "mapsOss"
+        ]
+    },
+    {
+        "id": "licenseManagement",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "home",
+            "licensing",
+            "management",
+            "features"
+        ],
+        "optionalPlugins": [
+            "telemetry"
+        ],
+        "configPath": [
+            "xpack",
+            "license_management"
+        ],
+        "extraPublicDirs": [
+            "common/constants"
+        ],
+        "requiredBundles": [
+            "telemetryManagementSection",
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "monitoring",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "monitoring"
+        ],
+        "requiredPlugins": [
+            "licensing",
+            "features",
+            "data",
+            "navigation",
+            "kibanaLegacy",
+            "observability"
+        ],
+        "optionalPlugins": [
+            "infra",
+            "usageCollection",
+            "home",
+            "cloud",
+            "triggersActionsUi",
+            "alerts",
+            "actions",
+            "encryptedSavedObjects",
+            "encryptedSavedObjects"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaUtils",
+            "home",
+            "alerts",
+            "kibanaReact",
+            "licenseManagement",
+            "triggersActionsUi"
+        ]
+    },
+    {
+        "id": "logstash",
+        "version": "0.0.1",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "logstash"
+        ],
+        "requiredPlugins": [
+            "licensing",
+            "management",
+            "features"
+        ],
+        "optionalPlugins": [
+            "home",
+            "monitoring",
+            "security"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "home"
+        ]
+    },
+    {
+        "id": "observability",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "observability"
+        ],
+        "optionalPlugins": [
+            "licensing",
+            "home",
+            "usageCollection"
+        ],
+        "requiredPlugins": [
+            "data"
+        ],
+        "ui": true,
+        "server": true,
+        "requiredBundles": [
+            "data",
+            "kibanaReact",
+            "kibanaUtils"
+        ]
+    },
+    {
+        "id": "ml",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "ml"
+        ],
+        "requiredPlugins": [
+            "data",
+            "cloud",
+            "features",
+            "licensing",
+            "usageCollection",
+            "share",
+            "embeddable",
+            "uiActions",
+            "kibanaLegacy",
+            "indexPatternManagement",
+            "discover"
+        ],
+        "optionalPlugins": [
+            "home",
+            "security",
+            "spaces",
+            "management",
+            "licenseManagement"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "esUiShared",
+            "kibanaUtils",
+            "kibanaReact",
+            "dashboard",
+            "savedObjects",
+            "home",
+            "spaces"
+        ],
+        "extraPublicDirs": [
+            "common"
+        ]
+    },
+    {
+        "id": "remoteClusters",
+        "version": "kibana",
+        "configPath": [
+            "xpack",
+            "remote_clusters"
+        ],
+        "requiredPlugins": [
+            "licensing",
+            "management",
+            "indexManagement",
+            "features"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "cloud"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaReact",
+            "esUiShared"
+        ]
+    },
+    {
+        "id": "reporting",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "optionalPlugins": [
+            "security",
+            "spaces",
+            "usageCollection"
+        ],
+        "configPath": [
+            "xpack",
+            "reporting"
+        ],
+        "requiredPlugins": [
+            "data",
+            "home",
+            "management",
+            "licensing",
+            "uiActions",
+            "embeddable",
+            "share",
+            "features"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaReact",
+            "discover"
+        ]
+    },
+    {
+        "id": "painlessLab",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "devTools",
+            "licensing",
+            "home"
+        ],
+        "configPath": [
+            "xpack",
+            "painless_lab"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "runtimeFields",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [],
+        "optionalPlugins": [],
+        "configPath": [
+            "xpack",
+            "runtime_fields"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "esUiShared"
+        ]
+    },
+    {
+        "id": "rollup",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "indexPatternManagement",
+            "management",
+            "licensing",
+            "features"
+        ],
+        "optionalPlugins": [
+            "home",
+            "indexManagement",
+            "usageCollection",
+            "visTypeTimeseries"
+        ],
+        "configPath": [
+            "xpack",
+            "rollup"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact",
+            "home",
+            "esUiShared",
+            "data"
+        ]
+    },
+    {
+        "id": "searchprofiler",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "devTools",
+            "home",
+            "licensing"
+        ],
+        "configPath": [
+            "xpack",
+            "searchprofiler"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "esUiShared"
+        ]
+    },
+    {
+        "id": "security",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "security"
+        ],
+        "requiredPlugins": [
+            "data",
+            "features",
+            "licensing",
+            "taskManager",
+            "securityOss"
+        ],
+        "optionalPlugins": [
+            "home",
+            "management",
+            "usageCollection",
+            "spaces"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "home",
+            "kibanaReact",
+            "spaces",
+            "esUiShared"
+        ]
+    },
+    {
+        "id": "securitySolution",
+        "version": "8.0.0",
+        "extraPublicDirs": [
+            "common"
+        ],
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "securitySolution"
+        ],
+        "requiredPlugins": [
+            "actions",
+            "alerts",
+            "data",
+            "dataEnhanced",
+            "embeddable",
+            "features",
+            "taskManager",
+            "inspector",
+            "licensing",
+            "maps",
+            "triggersActionsUi",
+            "uiActions"
+        ],
+        "optionalPlugins": [
+            "encryptedSavedObjects",
+            "fleet",
+            "ml",
+            "newsfeed",
+            "security",
+            "spaces",
+            "usageCollection",
+            "lists",
+            "home",
+            "telemetry",
+            "telemetryManagementSection"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "esUiShared",
+            "fleet",
+            "kibanaUtils",
+            "kibanaReact",
+            "lists",
+            "ml"
+        ]
+    },
+    {
+        "id": "snapshotRestore",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "licensing",
+            "management",
+            "features"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "security",
+            "cloud",
+            "home"
+        ],
+        "configPath": [
+            "xpack",
+            "snapshot_restore"
+        ],
+        "requiredBundles": [
+            "esUiShared",
+            "kibanaReact",
+            "home"
+        ]
+    },
+    {
+        "id": "savedObjectsTagging",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "configPath": [
+            "xpack",
+            "saved_object_tagging"
+        ],
+        "requiredPlugins": [
+            "features",
+            "management",
+            "savedObjectsTaggingOss"
+        ],
+        "requiredBundles": [
+            "kibanaReact"
+        ],
+        "optionalPlugins": [
+            "usageCollection"
+        ]
+    },
+    {
+        "id": "stackAlerts",
+        "server": true,
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "alerts",
+            "features",
+            "triggersActionsUi",
+            "kibanaReact",
+            "savedObjects",
+            "data"
+        ],
+        "configPath": [
+            "xpack",
+            "stack_alerts"
+        ],
+        "ui": true
+    },
+    {
+        "id": "spaces",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "spaces"
+        ],
+        "requiredPlugins": [
+            "features",
+            "licensing"
+        ],
+        "optionalPlugins": [
+            "advancedSettings",
+            "home",
+            "management",
+            "usageCollection",
+            "savedObjectsManagement"
+        ],
+        "server": true,
+        "ui": true,
+        "extraPublicDirs": [
+            "common"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "savedObjectsManagement",
+            "home"
+        ]
+    },
+    {
+        "id": "translations",
+        "version": "0.0.1",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "x-pack",
+            "translations"
+        ],
+        "server": true,
+        "ui": false
+    },
+    {
+        "id": "telemetryCollectionXpack",
+        "version": "kibana",
+        "server": true,
+        "ui": false,
+        "requiredPlugins": [
+            "telemetryCollectionManager"
+        ],
+        "optionalPlugins": []
+    },
+    {
+        "id": "triggersActionsUi",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "optionalPlugins": [
+            "alerts",
+            "features",
+            "home"
+        ],
+        "requiredPlugins": [
+            "management",
+            "charts",
+            "data",
+            "kibanaReact",
+            "kibanaUtils",
+            "savedObjects"
+        ],
+        "configPath": [
+            "xpack",
+            "trigger_actions_ui"
+        ],
+        "extraPublicDirs": [
+            "public/common",
+            "public/common/constants"
+        ],
+        "requiredBundles": [
+            "home",
+            "alerts",
+            "esUiShared",
+            "kibanaReact",
+            "kibanaUtils"
+        ]
+    },
+    {
+        "id": "taskManager",
+        "server": true,
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "task_manager"
+        ],
+        "ui": false
+    },
+    {
+        "id": "transform",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "home",
+            "licensing",
+            "management",
+            "features",
+            "savedObjects"
+        ],
+        "optionalPlugins": [
+            "security",
+            "usageCollection"
+        ],
+        "configPath": [
+            "xpack",
+            "transform"
+        ],
+        "requiredBundles": [
+            "esUiShared",
+            "discover",
+            "kibanaUtils",
+            "kibanaReact",
+            "ml"
+        ]
+    },
+    {
+        "id": "uiActionsEnhanced",
+        "version": "kibana",
+        "configPath": [
+            "xpack",
+            "ui_actions_enhanced"
+        ],
+        "requiredPlugins": [
+            "embeddable",
+            "uiActions",
+            "licensing"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact",
+            "data"
+        ]
+    },
+    {
+        "id": "watcher",
+        "configPath": [
+            "xpack",
+            "watcher"
+        ],
+        "version": "kibana",
+        "requiredPlugins": [
+            "home",
+            "licensing",
+            "management",
+            "charts",
+            "data",
+            "features"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "esUiShared",
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "xpackLegacy",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": false,
+        "requiredPlugins": [
+            "usageCollection"
+        ]
+    },
+    {
+        "id": "actions",
+        "server": true,
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "actions"
+        ],
+        "requiredPlugins": [
+            "licensing",
+            "taskManager",
+            "encryptedSavedObjects",
+            "eventLog",
+            "features"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "spaces",
+            "security"
+        ],
+        "ui": false
+    },
+    {
+        "id": "upgradeAssistant",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "configPath": [
+            "xpack",
+            "upgrade_assistant"
+        ],
+        "requiredPlugins": [
+            "management",
+            "licensing",
+            "features"
+        ],
+        "optionalPlugins": [
+            "cloud",
+            "usageCollection"
+        ]
+    },
+    {
+        "configPath": [
+            "xpack",
+            "uptime"
+        ],
+        "id": "uptime",
+        "kibanaVersion": "kibana",
+        "optionalPlugins": [
+            "data",
+            "home",
+            "observability",
+            "ml"
+        ],
+        "requiredPlugins": [
+            "alerts",
+            "embeddable",
+            "features",
+            "licensing",
+            "triggersActionsUi",
+            "usageCollection"
+        ],
+        "server": true,
+        "ui": true,
+        "version": "8.0.0",
+        "requiredBundles": [
+            "observability",
+            "kibanaReact",
+            "home",
+            "data",
+            "ml",
+            "maps"
+        ]
+    },
+    {
+        "id": "visTypeTimeseriesEnhanced",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": false,
+        "requiredPlugins": [
+            "visTypeTimeseries"
+        ]
+    },
+    {
+        "id": "alerts",
+        "server": true,
+        "ui": true,
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "alerts"
+        ],
+        "requiredPlugins": [
+            "licensing",
+            "taskManager",
+            "encryptedSavedObjects",
+            "actions",
+            "eventLog",
+            "features"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "spaces",
+            "security"
+        ],
+        "extraPublicDirs": [
+            "common",
+            "common/parse_duration"
+        ]
+    },
+    {
+        "id": "apm",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "features",
+            "apmOss",
+            "data",
+            "licensing",
+            "triggersActionsUi",
+            "embeddable"
+        ],
+        "optionalPlugins": [
+            "cloud",
+            "usageCollection",
+            "taskManager",
+            "actions",
+            "alerts",
+            "observability",
+            "security",
+            "ml",
+            "home"
+        ],
+        "server": true,
+        "ui": true,
+        "configPath": [
+            "xpack",
+            "apm"
+        ],
+        "extraPublicDirs": [
+            "public/style/variables"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "kibanaUtils",
+            "observability",
+            "home",
+            "maps",
+            "ml"
+        ]
+    },
+    {
+        "id": "beatsManagement",
+        "configPath": [
+            "xpack",
+            "beats_management"
+        ],
+        "ui": true,
+        "server": true,
+        "version": "kibana",
+        "requiredPlugins": [
+            "data",
+            "licensing",
+            "management",
+            "features"
+        ],
+        "optionalPlugins": [
+            "security"
+        ]
+    },
+    {
+        "id": "cloud",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "cloud"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "home",
+            "security"
+        ],
+        "server": true,
+        "ui": true
+    },
+    {
+        "id": "code",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "code"
+        ],
+        "server": true,
+        "ui": false
+    },
+    {
+        "id": "canvas",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "canvas"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "bfetch",
+            "data",
+            "embeddable",
+            "expressions",
+            "features",
+            "inspector",
+            "uiActions",
+            "charts"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "home"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "maps",
+            "lens",
+            "visualizations",
+            "kibanaUtils",
+            "kibanaLegacy",
+            "discover",
+            "savedObjects",
+            "reporting",
+            "home"
+        ]
+    },
+    {
+        "id": "crossClusterReplication",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "home",
+            "licensing",
+            "management",
+            "remoteClusters",
+            "indexManagement",
+            "features"
+        ],
+        "optionalPlugins": [
+            "usageCollection"
+        ],
+        "configPath": [
+            "xpack",
+            "ccr"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "esUiShared",
+            "data"
+        ]
+    },
+    {
+        "configPath": [
+            "xpack",
+            "case"
+        ],
+        "id": "case",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "actions"
+        ],
+        "optionalPlugins": [
+            "spaces",
+            "security"
+        ],
+        "server": true,
+        "ui": false,
+        "version": "8.0.0"
+    },
+    {
+        "id": "consoleExtensions",
+        "version": "1.0.0",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "console"
+        ],
+        "server": true,
+        "ui": false
+    },
+    {
+        "id": "dataEnhanced",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "data_enhanced"
+        ],
+        "requiredPlugins": [
+            "bfetch",
+            "data",
+            "features"
+        ],
+        "optionalPlugins": [
+            "kibanaUtils",
+            "usageCollection"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "dashboardEnhanced",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "uiActionsEnhanced",
+            "embeddable",
+            "dashboard",
+            "share"
+        ],
+        "configPath": [
+            "xpack",
+            "dashboardEnhanced"
+        ],
+        "requiredBundles": [
+            "embeddable",
+            "kibanaUtils",
+            "embeddableEnhanced",
+            "kibanaReact",
+            "uiActions"
+        ]
+    },
+    {
+        "id": "dashboardMode",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "dashboard_mode"
+        ],
+        "optionalPlugins": [
+            "security"
+        ],
+        "requiredPlugins": [
+            "kibanaLegacy",
+            "urlForwarding",
+            "dashboard"
+        ],
+        "server": true,
+        "ui": true
+    },
+    {
+        "id": "encryptedSavedObjects",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "encryptedSavedObjects"
+        ],
+        "optionalPlugins": [
+            "security"
+        ],
+        "server": true,
+        "ui": false
+    },
+    {
+        "id": "discoverEnhanced",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "uiActions",
+            "embeddable",
+            "discover"
+        ],
+        "optionalPlugins": [
+            "share",
+            "kibanaLegacy",
+            "usageCollection"
+        ],
+        "configPath": [
+            "xpack",
+            "discoverEnhanced"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "data",
+            "share"
+        ]
+    },
+    {
+        "id": "embeddableEnhanced",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [
+            "embeddable",
+            "kibanaReact",
+            "uiActions",
+            "uiActionsEnhanced"
+        ]
+    },
+    {
+        "id": "enterpriseSearch",
+        "version": "kibana",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "features",
+            "licensing"
+        ],
+        "configPath": [
+            "enterpriseSearch"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "security",
+            "home",
+            "spaces",
+            "cloud"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "home"
+        ]
+    },
+    {
+        "id": "eventLog",
+        "version": "0.0.1",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "eventLog"
+        ],
+        "optionalPlugins": [
+            "spaces"
+        ],
+        "server": true,
+        "ui": false
+    },
+    {
+        "id": "features",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "licensing"
+        ],
+        "optionalPlugins": [
+            "visTypeTimelion"
+        ],
+        "configPath": [
+            "xpack",
+            "features"
+        ],
+        "server": true,
+        "ui": true,
+        "extraPublicDirs": [
+            "common"
+        ]
+    },
+    {
+        "id": "fileUpload",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "usageCollection"
+        ]
+    },
+    {
+        "id": "fleet",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "configPath": [
+            "xpack",
+            "fleet"
+        ],
+        "requiredPlugins": [
+            "licensing",
+            "data",
+            "encryptedSavedObjects"
+        ],
+        "optionalPlugins": [
+            "security",
+            "features",
+            "cloud",
+            "usageCollection",
+            "home"
+        ],
+        "extraPublicDirs": [
+            "common"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "esUiShared",
+            "home",
+            "infra",
+            "kibanaUtils"
+        ]
+    },
+    {
+        "id": "globalSearch",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "licensing"
+        ],
+        "optionalPlugins": [],
+        "configPath": [
+            "xpack",
+            "global_search"
+        ]
+    },
+    {
+        "id": "globalSearchBar",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [
+            "globalSearch"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "savedObjectsTagging"
+        ],
+        "configPath": [
+            "xpack",
+            "global_search_bar"
+        ]
+    },
+    {
+        "id": "globalSearchProviders",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "globalSearch"
+        ],
+        "optionalPlugins": [],
+        "configPath": [
+            "xpack",
+            "global_search_providers"
+        ]
+    },
+    {
+        "id": "graph",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "licensing",
+            "data",
+            "navigation",
+            "savedObjects",
+            "kibanaLegacy"
+        ],
+        "optionalPlugins": [
+            "home",
+            "features"
+        ],
+        "configPath": [
+            "xpack",
+            "graph"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact",
+            "home"
+        ]
+    },
+    {
+        "id": "grokdebugger",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "licensing",
+            "home",
+            "devTools"
+        ],
+        "server": true,
+        "ui": true,
+        "configPath": [
+            "xpack",
+            "grokdebugger"
+        ],
+        "requiredBundles": [
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "indexManagement",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "home",
+            "licensing",
+            "management",
+            "features",
+            "share"
+        ],
+        "optionalPlugins": [
+            "security",
+            "usageCollection",
+            "fleet"
+        ],
+        "configPath": [
+            "xpack",
+            "index_management"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "esUiShared",
+            "runtimeFields"
+        ]
+    },
+    {
+        "id": "infra",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "features",
+            "usageCollection",
+            "spaces",
+            "data",
+            "dataEnhanced",
+            "visTypeTimeseries",
+            "alerts",
+            "triggersActionsUi"
+        ],
+        "optionalPlugins": [
+            "ml",
+            "observability",
+            "home"
+        ],
+        "server": true,
+        "ui": true,
+        "configPath": [
+            "xpack",
+            "infra"
+        ],
+        "requiredBundles": [
+            "observability",
+            "licenseManagement",
+            "kibanaUtils",
+            "kibanaReact",
+            "apm",
+            "home"
+        ]
+    },
+    {
+        "id": "ingestPipelines",
+        "version": "8.0.0",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "licensing",
+            "management",
+            "features",
+            "share"
+        ],
+        "optionalPlugins": [
+            "security",
+            "usageCollection"
+        ],
+        "configPath": [
+            "xpack",
+            "ingest_pipelines"
+        ],
+        "requiredBundles": [
+            "esUiShared",
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "lens",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "charts",
+            "expressions",
+            "navigation",
+            "urlForwarding",
+            "visualizations",
+            "dashboard",
+            "charts",
+            "uiActions",
+            "embeddable",
+            "share"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "taskManager",
+            "globalSearch",
+            "savedObjectsTagging"
+        ],
+        "configPath": [
+            "xpack",
+            "lens"
+        ],
+        "extraPublicDirs": [
+            "common/constants"
+        ],
+        "requiredBundles": [
+            "savedObjects",
+            "kibanaUtils",
+            "kibanaReact",
+            "embeddable",
+            "lensOss"
+        ]
+    },
+    {
+        "id": "indexLifecycleManagement",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "licensing",
+            "management",
+            "features",
+            "share"
+        ],
+        "optionalPlugins": [
+            "cloud",
+            "usageCollection",
+            "indexManagement",
+            "home"
+        ],
+        "configPath": [
+            "xpack",
+            "ilm"
+        ],
+        "requiredBundles": [
+            "indexManagement",
+            "kibanaReact",
+            "esUiShared",
+            "home"
+        ]
+    },
+    {
+        "id": "licenseManagement",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "home",
+            "licensing",
+            "management",
+            "features"
+        ],
+        "optionalPlugins": [
+            "telemetry"
+        ],
+        "configPath": [
+            "xpack",
+            "license_management"
+        ],
+        "extraPublicDirs": [
+            "common/constants"
+        ],
+        "requiredBundles": [
+            "telemetryManagementSection",
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "licensing",
+        "version": "0.0.1",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "licensing"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaReact"
+        ]
+    },
+    {
+        "configPath": [
+            "xpack",
+            "lists"
+        ],
+        "extraPublicDirs": [
+            "common"
+        ],
+        "id": "lists",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [],
+        "optionalPlugins": [
+            "spaces",
+            "security"
+        ],
+        "requiredBundles": [
+            "securitySolution"
+        ],
+        "server": true,
+        "ui": true,
+        "version": "8.0.0"
+    },
+    {
+        "id": "logstash",
+        "version": "0.0.1",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "logstash"
+        ],
+        "requiredPlugins": [
+            "licensing",
+            "management",
+            "features"
+        ],
+        "optionalPlugins": [
+            "home",
+            "monitoring",
+            "security"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "home"
+        ]
+    },
+    {
+        "id": "maps",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "maps"
+        ],
+        "requiredPlugins": [
+            "licensing",
+            "features",
+            "inspector",
+            "data",
+            "fileUpload",
+            "uiActions",
+            "navigation",
+            "visualizations",
+            "dashboard",
+            "embeddable",
+            "mapsLegacy",
+            "usageCollection",
+            "savedObjects",
+            "share"
+        ],
+        "optionalPlugins": [
+            "home",
+            "savedObjectsTagging"
+        ],
+        "ui": true,
+        "server": true,
+        "extraPublicDirs": [
+            "common/constants"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "kibanaUtils",
+            "home",
+            "mapsOss"
+        ]
+    },
+    {
+        "id": "mapsLegacyLicensing",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [
+            "licensing",
+            "mapsLegacy"
+        ]
+    },
+    {
+        "id": "observability",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "observability"
+        ],
+        "optionalPlugins": [
+            "licensing",
+            "home",
+            "usageCollection"
+        ],
+        "requiredPlugins": [
+            "data"
+        ],
+        "ui": true,
+        "server": true,
+        "requiredBundles": [
+            "data",
+            "kibanaReact",
+            "kibanaUtils"
+        ]
+    },
+    {
+        "id": "ml",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "ml"
+        ],
+        "requiredPlugins": [
+            "data",
+            "cloud",
+            "features",
+            "licensing",
+            "usageCollection",
+            "share",
+            "embeddable",
+            "uiActions",
+            "kibanaLegacy",
+            "indexPatternManagement",
+            "discover"
+        ],
+        "optionalPlugins": [
+            "home",
+            "security",
+            "spaces",
+            "management",
+            "licenseManagement"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "esUiShared",
+            "kibanaUtils",
+            "kibanaReact",
+            "dashboard",
+            "savedObjects",
+            "home",
+            "spaces"
+        ],
+        "extraPublicDirs": [
+            "common"
+        ]
+    },
+    {
+        "id": "remoteClusters",
+        "version": "kibana",
+        "configPath": [
+            "xpack",
+            "remote_clusters"
+        ],
+        "requiredPlugins": [
+            "licensing",
+            "management",
+            "indexManagement",
+            "features"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "cloud"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaReact",
+            "esUiShared"
+        ]
+    },
+    {
+        "id": "monitoring",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "monitoring"
+        ],
+        "requiredPlugins": [
+            "licensing",
+            "features",
+            "data",
+            "navigation",
+            "kibanaLegacy",
+            "observability"
+        ],
+        "optionalPlugins": [
+            "infra",
+            "usageCollection",
+            "home",
+            "cloud",
+            "triggersActionsUi",
+            "alerts",
+            "actions",
+            "encryptedSavedObjects",
+            "encryptedSavedObjects"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaUtils",
+            "home",
+            "alerts",
+            "kibanaReact",
+            "licenseManagement",
+            "triggersActionsUi"
+        ]
+    },
+    {
+        "id": "painlessLab",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "devTools",
+            "licensing",
+            "home"
+        ],
+        "configPath": [
+            "xpack",
+            "painless_lab"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "runtimeFields",
+        "version": "kibana",
+        "server": false,
+        "ui": true,
+        "requiredPlugins": [],
+        "optionalPlugins": [],
+        "configPath": [
+            "xpack",
+            "runtime_fields"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "esUiShared"
+        ]
+    },
+    {
+        "id": "reporting",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "optionalPlugins": [
+            "security",
+            "spaces",
+            "usageCollection"
+        ],
+        "configPath": [
+            "xpack",
+            "reporting"
+        ],
+        "requiredPlugins": [
+            "data",
+            "home",
+            "management",
+            "licensing",
+            "uiActions",
+            "embeddable",
+            "share",
+            "features"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaReact",
+            "discover"
+        ]
+    },
+    {
+        "id": "rollup",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "indexPatternManagement",
+            "management",
+            "licensing",
+            "features"
+        ],
+        "optionalPlugins": [
+            "home",
+            "indexManagement",
+            "usageCollection",
+            "visTypeTimeseries"
+        ],
+        "configPath": [
+            "xpack",
+            "rollup"
+        ],
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact",
+            "home",
+            "esUiShared",
+            "data"
+        ]
+    },
+    {
+        "id": "searchprofiler",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "devTools",
+            "home",
+            "licensing"
+        ],
+        "configPath": [
+            "xpack",
+            "searchprofiler"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "esUiShared"
+        ]
+    },
+    {
+        "id": "savedObjectsTagging",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": true,
+        "configPath": [
+            "xpack",
+            "saved_object_tagging"
+        ],
+        "requiredPlugins": [
+            "features",
+            "management",
+            "savedObjectsTaggingOss"
+        ],
+        "requiredBundles": [
+            "kibanaReact"
+        ],
+        "optionalPlugins": [
+            "usageCollection"
+        ]
+    },
+    {
+        "id": "snapshotRestore",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "licensing",
+            "management",
+            "features"
+        ],
+        "optionalPlugins": [
+            "usageCollection",
+            "security",
+            "cloud",
+            "home"
+        ],
+        "configPath": [
+            "xpack",
+            "snapshot_restore"
+        ],
+        "requiredBundles": [
+            "esUiShared",
+            "kibanaReact",
+            "home"
+        ]
+    },
+    {
+        "id": "stackAlerts",
+        "server": true,
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "requiredPlugins": [
+            "alerts",
+            "features",
+            "triggersActionsUi",
+            "kibanaReact",
+            "savedObjects",
+            "data"
+        ],
+        "configPath": [
+            "xpack",
+            "stack_alerts"
+        ],
+        "ui": true
+    },
+    {
+        "id": "security",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "security"
+        ],
+        "requiredPlugins": [
+            "data",
+            "features",
+            "licensing",
+            "taskManager",
+            "securityOss"
+        ],
+        "optionalPlugins": [
+            "home",
+            "management",
+            "usageCollection",
+            "spaces"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "home",
+            "kibanaReact",
+            "spaces",
+            "esUiShared"
+        ]
+    },
+    {
+        "id": "spaces",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "spaces"
+        ],
+        "requiredPlugins": [
+            "features",
+            "licensing"
+        ],
+        "optionalPlugins": [
+            "advancedSettings",
+            "home",
+            "management",
+            "usageCollection",
+            "savedObjectsManagement"
+        ],
+        "server": true,
+        "ui": true,
+        "extraPublicDirs": [
+            "common"
+        ],
+        "requiredBundles": [
+            "kibanaReact",
+            "savedObjectsManagement",
+            "home"
+        ]
+    },
+    {
+        "id": "taskManager",
+        "server": true,
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "task_manager"
+        ],
+        "ui": false
+    },
+    {
+        "id": "telemetryCollectionXpack",
+        "version": "kibana",
+        "server": true,
+        "ui": false,
+        "requiredPlugins": [
+            "telemetryCollectionManager"
+        ],
+        "optionalPlugins": []
+    },
+    {
+        "id": "securitySolution",
+        "version": "8.0.0",
+        "extraPublicDirs": [
+            "common"
+        ],
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "xpack",
+            "securitySolution"
+        ],
+        "requiredPlugins": [
+            "actions",
+            "alerts",
+            "data",
+            "dataEnhanced",
+            "embeddable",
+            "features",
+            "taskManager",
+            "inspector",
+            "licensing",
+            "maps",
+            "triggersActionsUi",
+            "uiActions"
+        ],
+        "optionalPlugins": [
+            "encryptedSavedObjects",
+            "fleet",
+            "ml",
+            "newsfeed",
+            "security",
+            "spaces",
+            "usageCollection",
+            "lists",
+            "home",
+            "telemetry",
+            "telemetryManagementSection"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "esUiShared",
+            "fleet",
+            "kibanaUtils",
+            "kibanaReact",
+            "lists",
+            "ml"
+        ]
+    },
+    {
+        "id": "transform",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "requiredPlugins": [
+            "data",
+            "home",
+            "licensing",
+            "management",
+            "features",
+            "savedObjects"
+        ],
+        "optionalPlugins": [
+            "security",
+            "usageCollection"
+        ],
+        "configPath": [
+            "xpack",
+            "transform"
+        ],
+        "requiredBundles": [
+            "esUiShared",
+            "discover",
+            "kibanaUtils",
+            "kibanaReact",
+            "ml"
+        ]
+    },
+    {
+        "id": "translations",
+        "version": "0.0.1",
+        "kibanaVersion": "kibana",
+        "configPath": [
+            "x-pack",
+            "translations"
+        ],
+        "server": true,
+        "ui": false
+    },
+    {
+        "id": "uiActionsEnhanced",
+        "version": "kibana",
+        "configPath": [
+            "xpack",
+            "ui_actions_enhanced"
+        ],
+        "requiredPlugins": [
+            "embeddable",
+            "uiActions",
+            "licensing"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "kibanaUtils",
+            "kibanaReact",
+            "data"
+        ]
+    },
+    {
+        "id": "triggersActionsUi",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "optionalPlugins": [
+            "alerts",
+            "features",
+            "home"
+        ],
+        "requiredPlugins": [
+            "management",
+            "charts",
+            "data",
+            "kibanaReact",
+            "kibanaUtils",
+            "savedObjects"
+        ],
+        "configPath": [
+            "xpack",
+            "trigger_actions_ui"
+        ],
+        "extraPublicDirs": [
+            "public/common",
+            "public/common/constants"
+        ],
+        "requiredBundles": [
+            "home",
+            "alerts",
+            "esUiShared",
+            "kibanaReact",
+            "kibanaUtils"
+        ]
+    },
+    {
+        "id": "upgradeAssistant",
+        "version": "kibana",
+        "server": true,
+        "ui": true,
+        "configPath": [
+            "xpack",
+            "upgrade_assistant"
+        ],
+        "requiredPlugins": [
+            "management",
+            "licensing",
+            "features"
+        ],
+        "optionalPlugins": [
+            "cloud",
+            "usageCollection"
+        ]
+    },
+    {
+        "id": "visTypeTimeseriesEnhanced",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": false,
+        "requiredPlugins": [
+            "visTypeTimeseries"
+        ]
+    },
+    {
+        "configPath": [
+            "xpack",
+            "uptime"
+        ],
+        "id": "uptime",
+        "kibanaVersion": "kibana",
+        "optionalPlugins": [
+            "data",
+            "home",
+            "observability",
+            "ml"
+        ],
+        "requiredPlugins": [
+            "alerts",
+            "embeddable",
+            "features",
+            "licensing",
+            "triggersActionsUi",
+            "usageCollection"
+        ],
+        "server": true,
+        "ui": true,
+        "version": "8.0.0",
+        "requiredBundles": [
+            "observability",
+            "kibanaReact",
+            "home",
+            "data",
+            "ml",
+            "maps"
+        ]
+    },
+    {
+        "id": "watcher",
+        "configPath": [
+            "xpack",
+            "watcher"
+        ],
+        "version": "kibana",
+        "requiredPlugins": [
+            "home",
+            "licensing",
+            "management",
+            "charts",
+            "data",
+            "features"
+        ],
+        "server": true,
+        "ui": true,
+        "requiredBundles": [
+            "esUiShared",
+            "kibanaReact"
+        ]
+    },
+    {
+        "id": "xpackLegacy",
+        "version": "8.0.0",
+        "kibanaVersion": "kibana",
+        "server": true,
+        "ui": false,
+        "requiredPlugins": [
+            "usageCollection"
+        ]
+    }
+]

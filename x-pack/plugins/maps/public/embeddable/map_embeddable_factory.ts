@@ -15,6 +15,7 @@ import { getMapEmbeddableDisplayName } from '../../common/i18n_getters';
 import { MapByReferenceInput, MapEmbeddableInput } from './types';
 import { lazyLoadMapModules } from '../lazy_load_bundle';
 
+// factory declared for map type of embeddable type
 export class MapEmbeddableFactory implements EmbeddableFactoryDefinition {
   type = MAP_SAVED_OBJECT_TYPE;
   savedObjectMetaData = {

@@ -107,6 +107,7 @@ export function initDashboardApp(app, deps) {
           const dashboardConfig = deps.dashboardConfig;
 
           // syncs `_g` portion of url with query services
+          //dataQuery sync
           const { stop: stopSyncingQueryServiceStateWithUrl } = syncQueryStateWithUrl(
             deps.data.query,
             kbnUrlStateStorage

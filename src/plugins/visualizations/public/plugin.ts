@@ -89,6 +89,7 @@ import { SavedObjectsStart } from '../../saved_objects/public';
 
 export type VisualizationsSetup = TypesSetup;
 
+// type returns by start method
 export interface VisualizationsStart extends TypesStart {
   savedVisualizationsLoader: SavedVisualizationsLoader;
   createVis: (visType: string, visState: SerializedVis) => Promise<Vis>;
@@ -149,10 +150,15 @@ export class VisualizationsPlugin
     setUISettings(core.uiSettings);
     setUsageCollector(usageCollection);
 
+    // save function to apply on a pipe
     expressions.registerFunction(visualizationFunction);
+    // save renderer
     expressions.registerRenderer(visualizationRenderer);
+    // kind of range ui settings?
     expressions.registerFunction(rangeExpressionFunction);
+    // 
     expressions.registerFunction(visDimensionExpressionFunction);
+    // save embeddablefactory for visualize
     const embeddableFactory = new VisualizeEmbeddableFactory({ start });
     embeddable.registerEmbeddableFactory(VISUALIZE_EMBEDDABLE_TYPE, embeddableFactory);
 
@@ -166,6 +172,7 @@ export class VisualizationsPlugin
     { data, expressions, uiActions, embeddable, dashboard, savedObjects }: VisualizationsStartDeps
   ): VisualizationsStart {
     const types = this.types.start();
+    // why setting all of that ?
     setI18n(core.i18n);
     setTypes(types);
     setEmbeddable(embeddable);

@@ -63,6 +63,7 @@ export const VisualizeEditor = ({ onAppLeave }: VisualizeAppProps) => {
   );
   useLinkedSearchUpdates(services, eventEmitter, appState, savedVisInstance);
 
+  console.log("YATA visualize Editor");
   useEffect(() => {
     const { originatingApp: value } =
       services.embeddable

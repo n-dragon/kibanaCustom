@@ -553,6 +553,7 @@ export class DashboardAppController {
           }
 
           if (dashboardDom && container) {
+            // here rendering react component
             container.render(dashboardDom);
           }
         });

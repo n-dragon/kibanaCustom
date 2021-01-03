@@ -31,7 +31,7 @@ interface StartServices {
 export const createHelloWorldAction = (getStartServices: () => Promise<StartServices>) =>
   createAction({
     type: ACTION_HELLO_WORLD,
-    getDisplayName: () => 'Hello World!',
+    getDisplayName: () => 'Hello studio!',
     execute: async () => {
       const { openModal } = await getStartServices();
       const overlay = openModal(

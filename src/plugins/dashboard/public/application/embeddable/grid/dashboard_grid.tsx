@@ -178,6 +178,7 @@ class DashboardGridUi extends React.Component<DashboardGridProps, State> {
       isLayoutInvalid,
     });
 
+    // subsribe of container input to update state automatically
     this.subscription = this.props.container
       .getInput$()
       .subscribe((input: DashboardContainerInput) => {
@@ -276,7 +277,9 @@ class DashboardGridUi extends React.Component<DashboardGridProps, State> {
             // This key is used to force rerendering on embeddable type change while the id remains the same
             key={panel.type}
             embeddableId={panel.explicitInput.id}
+            // will load embeddable
             container={this.props.container}
+            // other wrapper to render embeddable
             PanelComponent={this.props.PanelComponent}
           />
         </div>

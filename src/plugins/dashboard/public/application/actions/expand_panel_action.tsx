@@ -58,13 +58,14 @@ export class ExpandPanelAction implements ActionByType<typeof ACTION_EXPAND_PANE
       throw new IncompatibleActionError();
     }
 
-    return isExpanded(embeddable)
-      ? i18n.translate('dashboard.actions.toggleExpandPanelMenuItem.expandedDisplayName', {
-          defaultMessage: 'Minimize',
-        })
-      : i18n.translate('dashboard.actions.toggleExpandPanelMenuItem.notExpandedDisplayName', {
-          defaultMessage: 'Maximize panel',
-        });
+    return 'EXPAND_PANEL_ACTION';
+    // return isExpanded(embeddable)
+      // ? i18n.translate('dashboard.actions.toggleExpandPanelMenuItem.expandedDisplayName', {
+          // defaultMessage: 'Minimize',
+        // })
+      // : i18n.translate('dashboard.actions.toggleExpandPanelMenuItem.notExpandedDisplayName', {
+          // defaultMessage: 'Maximize panel',
+        // });
   }
 
   public getIconType({ embeddable }: ExpandPanelActionContext) {

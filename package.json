@@ -14,7 +14,7 @@
   "version": "8.0.0",
   "branch": "master",
   "types": "./kibana.d.ts",
-  "tsdocMetadata": "./build/tsdoc-metadata.json",
+"tsdocMetadata": "./build/tsdoc-metadata.json",
   "build": {
     "number": 8467,
     "sha": "6cb7fec4e154faa0a4a3fee4b33dfef91b9870d9"

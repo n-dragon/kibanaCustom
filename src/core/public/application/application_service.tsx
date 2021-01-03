@@ -196,6 +196,7 @@ export class ApplicationService {
           unmountBeforeMounting: false,
         });
       },
+      // register app that can update shared values
       registerAppUpdater: (appUpdater$: Observable<AppUpdater>) =>
         registerStatusUpdater(allApplicationsFilter, appUpdater$),
     };

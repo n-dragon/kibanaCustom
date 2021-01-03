@@ -34,6 +34,7 @@ export class LensOSSPlugin {
     { visualizations }: LensPluginSetupDependencies
   ) {
     core.getStartServices().then(([coreStart]) => {
+      // save lens oss as a visualization
       visualizations.registerAlias(getLensAliasConfig(coreStart.docLinks));
     });
   }

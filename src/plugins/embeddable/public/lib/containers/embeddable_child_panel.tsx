@@ -42,6 +42,7 @@ interface State {
  * for the child to be initialized, showing a loading indicator until that is complete.
  */
 
+ // get id of embeddable and loaded by container
 export class EmbeddableChildPanel extends React.Component<EmbeddableChildPanelProps, State> {
   [panel: string]: any;
   public mounted: boolean;

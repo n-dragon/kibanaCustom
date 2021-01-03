@@ -141,7 +141,7 @@ export class VisualizePlugin
 
     core.application.register({
       id: 'visualize',
-      title: 'Visualize',
+      title: 'Studio Vizualize',
       order: 8000,
       euiIconType: 'logoKibana',
       defaultPath: '#/',

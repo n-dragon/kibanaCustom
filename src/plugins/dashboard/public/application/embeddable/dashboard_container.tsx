@@ -116,6 +116,7 @@ export class DashboardContainer extends Container<InheritedChildInput, Dashboard
       options.embeddable.getEmbeddableFactory,
       parent
     );
+    //RGL renders a panel
     this.embeddablePanel = options.embeddable.getEmbeddablePanel(stateTransfer);
   }
 

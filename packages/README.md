@@ -2,6 +2,7 @@
 
 This folder contains packages that are intended for use in Kibana and Kibana
 plugins.
+// kibana packages
 
 tl;dr:
 
